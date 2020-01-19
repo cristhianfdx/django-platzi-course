@@ -56,6 +56,11 @@ def signup(request):
 
 
 @login_required
+def update_profile(request):
+    return render(request, 'users/update_profile.html')
+
+
+@login_required
 def logout_view(request):
     logout(request)
     return redirect('login')
